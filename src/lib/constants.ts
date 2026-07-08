@@ -1,0 +1,73 @@
+export const SECTORS = [
+    {
+      id: 'food',
+      title: 'Food Sector',
+      description: 'Food business management, branding, marketing and scaling. Learn how to build and grow a profitable food business.',
+      icon: '🍔',
+      color: 'from-orange-500 to-amber-400',
+    },
+    {
+      id: 'fashion',
+      title: 'Fashion Sector',
+      description: 'Fashion entrepreneurship, brand development and business growth. Build a fashion brand that stands out and sells.',
+      icon: '👗',
+      color: 'from-pink-500 to-rose-400',
+    },
+    {
+      id: 'real-estate',
+      title: 'Real Estate Sector',
+      description: 'Property investment, real estate business and wealth creation strategies that work in the Nigerian market.',
+      icon: '🏠',
+      color: 'from-blue-500 to-indigo-400',
+    },
+    {
+      id: 'financial-literacy',
+      title: 'Financial Literacy',
+      description: 'Budgeting, cash flow management, investment strategies and financial planning for entrepreneurs.',
+      icon: '📊',
+      color: 'from-green-500 to-emerald-400',
+    },
+  ]
+  
+  export const NAV_LINKS = [
+    { label: 'Home', href: '/' },
+    { label: 'About', href: '/about' },
+    { label: 'Sectors', href: '/sectors' },
+    { label: 'Programs', href: '/programs' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Contact', href: '/contact' },
+  ]
+  
+  export const STATS = [
+    { value: 500, suffix: '+', label: 'Graduates' },
+    { value: 4, suffix: '', label: 'Sectors' },
+    { value: 92, suffix: '%', label: 'Success Rate' },
+    { value: 12, suffix: 'wks', label: 'Program Length' },
+  ]
+  
+  export const FAQS = [
+    {
+      question: 'Do I need prior business experience to join?',
+      answer: 'No experience is required. Our programs are designed for aspiring entrepreneurs, beginners, and professionals at any stage who want to build or grow a business.',
+    },
+    {
+      question: 'How long does each program last?',
+      answer: 'Each program runs for approximately 12 weeks. The schedule is structured but flexible enough to balance with other commitments.',
+    },
+    {
+      question: 'Is the training online or physical?',
+      answer: 'We offer both online and hybrid learning options so you can participate from anywhere in Nigeria or abroad.',
+    },
+    {
+      question: 'Can I pay in installments?',
+      answer: 'Yes. Reach out to us on WhatsApp before registering and we will discuss a payment plan that works for you.',
+    },
+    {
+      question: 'Will I receive a certificate after completing the program?',
+      answer: 'Yes. All graduates receive a verified certificate of completion from Tofeb Academy.',
+    },
+    {
+      question: 'What makes Tofeb Academy different from other programs?',
+      answer: 'We focus entirely on practical business education — not theory. Every module is designed around real market realities so you can apply what you learn immediately.',
+    },
+  ]
