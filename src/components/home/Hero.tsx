@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle } from 'lucide-react'
+import { UtensilsCrossed, Shirt, Building2, TrendingUp } from 'lucide-react'
 
 const highlights = [
   'No prior experience required',
@@ -115,19 +116,22 @@ export default function Hero() {
           className="mt-20 flex flex-wrap gap-3"
         >
           {[
-            { icon: '🍔', label: 'Food Sector' },
-            { icon: '👗', label: 'Fashion Sector' },
-            { icon: '🏠', label: 'Real Estate' },
-            { icon: '📊', label: 'Financial Literacy' },
-          ].map((sector) => (
-            <div
-              key={sector.label}
-              className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-gray-300"
-            >
-              <span>{sector.icon}</span>
-              <span>{sector.label}</span>
-            </div>
-          ))}
+            { icon: UtensilsCrossed, label: 'Food Sector' },
+            { icon: Shirt, label: 'Fashion Sector' },
+            { icon: Building2, label: 'Real Estate' },
+            { icon: TrendingUp, label: 'Financial Literacy' },
+          ].map((sector) => {
+            const Icon = sector.icon
+            return (
+              <div
+                key={sector.label}
+                className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-gray-300"
+              >
+                <Icon size={14} className="text-blue-400" />
+                <span>{sector.label}</span>
+              </div>
+            )
+          })}
         </motion.div>
       </div>
     </section>

@@ -1,33 +1,35 @@
+import { UtensilsCrossed, Shirt, Building2, TrendingUp } from 'lucide-react'
+
 export const SECTORS = [
-    {
-      id: 'food',
-      title: 'Food Sector',
-      description: 'Food business management, branding, marketing and scaling. Learn how to build and grow a profitable food business.',
-      icon: '🍔',
-      color: 'from-orange-500 to-amber-400',
-    },
-    {
-      id: 'fashion',
-      title: 'Fashion Sector',
-      description: 'Fashion entrepreneurship, brand development and business growth. Build a fashion brand that stands out and sells.',
-      icon: '👗',
-      color: 'from-pink-500 to-rose-400',
-    },
-    {
-      id: 'real-estate',
-      title: 'Real Estate Sector',
-      description: 'Property investment, real estate business and wealth creation strategies that work in the Nigerian market.',
-      icon: '🏠',
-      color: 'from-blue-500 to-indigo-400',
-    },
-    {
-      id: 'financial-literacy',
-      title: 'Financial Literacy',
-      description: 'Budgeting, cash flow management, investment strategies and financial planning for entrepreneurs.',
-      icon: '📊',
-      color: 'from-green-500 to-emerald-400',
-    },
-  ]
+  {
+    id: 'food',
+    title: 'Food Sector',
+    description: 'Food business management, branding, marketing and scaling. Learn how to build and grow a profitable food business.',
+    icon: UtensilsCrossed,
+    color: 'from-orange-500 to-amber-400',
+  },
+  {
+    id: 'fashion',
+    title: 'Fashion Sector',
+    description: 'Fashion entrepreneurship, brand development and business growth. Build a fashion brand that stands out and sells.',
+    icon: Shirt,
+    color: 'from-pink-500 to-rose-400',
+  },
+  {
+    id: 'real-estate',
+    title: 'Real Estate Sector',
+    description: 'Property investment, real estate business and wealth creation strategies that work in the Nigerian market.',
+    icon: Building2,
+    color: 'from-blue-500 to-indigo-400',
+  },
+  {
+    id: 'financial-literacy',
+    title: 'Financial Literacy',
+    description: 'Budgeting, cash flow management, investment strategies and financial planning for entrepreneurs.',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-400',
+  },
+]
   
   export const NAV_LINKS = [
     { label: 'Home', href: '/' },
