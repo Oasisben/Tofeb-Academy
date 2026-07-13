@@ -1,3 +1,11 @@
+import { NextResponse } from "next/server";
+
+export async function POST() {
+  return NextResponse.json({
+    message: "Registration endpoint coming soon.",
+  });
+}
+
 /*import { NextRequest, NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
 //import { registrationSchema } from '@/lib/validations'
