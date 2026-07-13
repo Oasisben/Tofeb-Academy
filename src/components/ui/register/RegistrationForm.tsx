@@ -1,8 +1,8 @@
-'use client'
+/*'use client'
 
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
-import { registrationSchema, RegistrationInput } from '@/lib/validations'
+//import { registrationSchema, RegistrationInput } from '@/lib/validations'
 import { useState } from 'react'
 
 export default function RegistrationForm() {
@@ -45,7 +45,7 @@ export default function RegistrationForm() {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-      {/* Full Name */}
+      {/* Full Name *//*}
       <div>
         <label className="block text-sm font-semibold text-navy mb-1">Full Name</label>
         <input
@@ -56,8 +56,8 @@ export default function RegistrationForm() {
         {errors.full_name && <p className="text-red-500 text-xs mt-1">{errors.full_name.message}</p>}
       </div>
 
-      {/* Phone */}
-      <div>
+      {/* Phone */
+      /*<div>
         <label className="block text-sm font-semibold text-navy mb-1">Phone Number</label>
         <input
           {...register('phone')}
@@ -67,8 +67,8 @@ export default function RegistrationForm() {
         {errors.phone && <p className="text-red-500 text-xs mt-1">{errors.phone.message}</p>}
       </div>
 
-      {/* Email */}
-      <div>
+      {/* Email */
+      /*<div>
         <label className="block text-sm font-semibold text-navy mb-1">Email Address</label>
         <input
           {...register('email')}
@@ -79,7 +79,7 @@ export default function RegistrationForm() {
         {errors.email && <p className="text-red-500 text-xs mt-1">{errors.email.message}</p>}
       </div>
 
-      {/* State */}
+      {/* State *//*}
       <div>
         <label className="block text-sm font-semibold text-navy mb-1">State / Country</label>
         <input
@@ -90,7 +90,7 @@ export default function RegistrationForm() {
         {errors.state && <p className="text-red-500 text-xs mt-1">{errors.state.message}</p>}
       </div>
 
-      {/* Sector */}
+      {/* Sector *//*}
       <div>
         <label className="block text-sm font-semibold text-navy mb-1">Preferred Sector</label>
         <select
@@ -119,4 +119,4 @@ export default function RegistrationForm() {
       )}
     </form>
   )
-}
+}*/
