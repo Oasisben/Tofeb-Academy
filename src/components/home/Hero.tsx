@@ -2,137 +2,143 @@
 
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle } from 'lucide-react'
-import { UtensilsCrossed, Shirt, Building2, TrendingUp } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
-const highlights = [
-  'No prior experience required',
-  'Learn from industry professionals',
-  'Certificate upon completion',
+const sectors = [
+  'Food Business',
+  'Fashion Business',
+  'Real Estate',
+  'Financial Literacy',
 ]
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen bg-[#0a1628] flex items-center overflow-hidden">
-      {/* Background gradients */}
+    <section className="relative min-h-screen bg-[#0a1628] flex flex-col justify-center overflow-hidden">
+      {/* Animated background orbs */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute -top-40 -right-40 w-[600px] h-[600px] bg-blue-600/20 rounded-full blur-[120px]" />
-        <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] bg-blue-800/20 rounded-full blur-[120px]" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-blue-900/10 rounded-full blur-[160px]" />
+        <motion.div
+          animate={{ scale: [1, 1.15, 1], opacity: [0.15, 0.25, 0.15] }}
+          transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
+          className="absolute -top-40 -right-40 w-[700px] h-[700px] bg-blue-600 rounded-full blur-[140px]"
+        />
+        <motion.div
+          animate={{ scale: [1, 1.1, 1], opacity: [0.1, 0.18, 0.1] }}
+          transition={{ duration: 10, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          className="absolute -bottom-60 -left-40 w-[600px] h-[600px] bg-blue-800 rounded-full blur-[140px]"
+        />
       </div>
 
-      {/* Grid pattern overlay */}
+      {/* Grid overlay */}
       <div
-        className="absolute inset-0 opacity-[0.03]"
+        className="absolute inset-0 opacity-[0.04]"
         style={{
-          backgroundImage: `linear-gradient(rgba(255,255,255,0.5) 1px, transparent 1px),
-            linear-gradient(90deg, rgba(255,255,255,0.5) 1px, transparent 1px)`,
-          backgroundSize: '60px 60px',
+          backgroundImage: `linear-gradient(rgba(255,255,255,0.8) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(255,255,255,0.8) 1px, transparent 1px)`,
+          backgroundSize: '72px 72px',
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-5 pt-28 pb-20 w-full">
-        <div className="max-w-3xl">
+      <div className="relative z-10 max-w-7xl mx-auto px-5 pt-32 pb-24 w-full">
+        <div className="max-w-4xl">
           {/* Badge */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-8"
+            className="inline-flex items-center gap-2 bg-blue-500/10 border border-blue-500/20 rounded-full px-4 py-2 mb-10"
           >
             <span className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-            <span className="text-blue-300 text-sm font-medium">Now Enrolling — 2026 Cohort</span>
+            <span className="text-blue-300 text-sm font-medium">
+              Now Enrolling — 2025 Cohort
+            </span>
           </motion.div>
 
-          {/* Headline */}
-          <motion.h1
-            initial={{ opacity: 0, y: 24 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="font-jakarta text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] tracking-tight mb-6"
-          >
-            Building{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-blue-200">
-              Tomorrow's
-            </span>
-            <br />
-            Entrepreneurs
-          </motion.h1>
+          {/* Headline — staggered lines */}
+          <div className="mb-8 space-y-2">
+            {['Building', "Tomorrow's", 'Entrepreneurs.'].map((word, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 40 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.7, delay: 0.1 + i * 0.12, ease: 'easeOut' }}
+              >
+                <span
+                  className={`block font-jakarta font-bold leading-[1.05] tracking-tight ${
+                    i === 2
+                      ? 'text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-blue-300 to-blue-200'
+                      : 'text-white'
+                  } text-6xl md:text-7xl lg:text-8xl`}
+                >
+                  {word}
+                </span>
+              </motion.div>
+            ))}
+          </div>
 
           {/* Subtext */}
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-400 text-lg md:text-xl leading-relaxed mb-8 max-w-2xl"
+            transition={{ duration: 0.6, delay: 0.5 }}
+            className="text-gray-400 text-xl leading-relaxed mb-10 max-w-xl"
           >
-            Tofeb Academy equips aspiring entrepreneurs and business owners with
-            practical business knowledge, industry insights, and growth strategies
-            across four high-impact sectors.
+            Learn practical business strategies from industry experts — and build
+            something that actually lasts.
           </motion.p>
 
-          {/* Highlights */}
-          <motion.ul
-            initial={{ opacity: 0, y: 24 }}
+          {/* Sector chips */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex flex-col sm:flex-row flex-wrap gap-3 mb-10"
+            transition={{ duration: 0.6, delay: 0.65 }}
+            className="flex flex-wrap gap-3 mb-12"
           >
-            {highlights.map((item) => (
-              <li key={item} className="flex items-center gap-2 text-sm text-gray-300">
-                <CheckCircle size={16} className="text-blue-400 flex-shrink-0" />
-                {item}
-              </li>
+            {sectors.map((s) => (
+              <span
+                key={s}
+                className="flex items-center gap-2 text-sm text-gray-300 bg-white/5 border border-white/10 rounded-full px-4 py-2"
+              >
+                <span className="w-1.5 h-1.5 rounded-full bg-blue-400" />
+                {s}
+              </span>
             ))}
-          </motion.ul>
+          </motion.div>
 
           {/* CTAs */}
           <motion.div
-            initial={{ opacity: 0, y: 24 }}
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
+            transition={{ duration: 0.6, delay: 0.8 }}
             className="flex flex-col sm:flex-row gap-4"
           >
             <Link
               href="/register"
-              className="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all hover:shadow-lg hover:shadow-blue-500/25 hover:-translate-y-0.5 text-base"
+              className="group inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 hover:-translate-y-1 text-base"
             >
-              Apply Now <ArrowRight size={18} />
+              Join the Program
+              <ArrowRight
+                size={18}
+                className="group-hover:translate-x-1 transition-transform duration-300"
+              />
             </Link>
             <Link
               href="/about"
-              className="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/30 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all text-base"
+              className="inline-flex items-center justify-center gap-2 border border-white/15 hover:border-white/40 text-gray-300 hover:text-white font-semibold px-8 py-4 rounded-xl transition-all duration-300 text-base hover:bg-white/5"
             >
               Learn More
             </Link>
           </motion.div>
         </div>
+      </div>
 
-        {/* Sector pills — bottom */}
-        <motion.div
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          className="mt-20 flex flex-wrap gap-3"
-        >
-          {[
-            { icon: UtensilsCrossed, label: 'Food Sector' },
-            { icon: Shirt, label: 'Fashion Sector' },
-            { icon: Building2, label: 'Real Estate' },
-            { icon: TrendingUp, label: 'Financial Literacy' },
-          ].map((sector) => {
-            const Icon = sector.icon
-            return (
-              <div
-                key={sector.label}
-                className="flex items-center gap-2 bg-white/5 border border-white/10 rounded-full px-4 py-2 text-sm text-gray-300"
-              >
-                <Icon size={14} className="text-blue-400" />
-                <span>{sector.label}</span>
-              </div>
-            )
-          })}
-        </motion.div>
+      {/* Wave divider */}
+      <div className="absolute bottom-0 left-0 right-0">
+        <svg viewBox="0 0 1440 80" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full">
+          <path
+            d="M0 40 C360 80 1080 0 1440 40 L1440 80 L0 80 Z"
+            fill="white"
+          />
+        </svg>
       </div>
     </section>
   )
