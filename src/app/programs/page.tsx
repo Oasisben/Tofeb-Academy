@@ -13,7 +13,7 @@ const programs = [
     gradient: 'from-orange-500 to-amber-400',
     lightBg: 'bg-orange-50',
     iconColor: 'text-orange-500',
-    duration: '12 Weeks',
+    duration: '4 Weeks',
     students: '150+ Enrolled',
     level: 'Beginner to Intermediate',
     modules: [
@@ -41,7 +41,7 @@ const programs = [
     gradient: 'from-pink-500 to-rose-400',
     lightBg: 'bg-pink-50',
     iconColor: 'text-pink-500',
-    duration: '12 Weeks',
+    duration: '4 Weeks',
     students: '120+ Enrolled',
     level: 'Beginner to Intermediate',
     modules: [
@@ -69,7 +69,7 @@ const programs = [
     gradient: 'from-blue-500 to-indigo-400',
     lightBg: 'bg-blue-50',
     iconColor: 'text-blue-500',
-    duration: '12 Weeks',
+    duration: '4 Weeks',
     students: '100+ Enrolled',
     level: 'Beginner to Intermediate',
     modules: [
@@ -97,7 +97,7 @@ const programs = [
     gradient: 'from-green-500 to-emerald-400',
     lightBg: 'bg-green-50',
     iconColor: 'text-green-500',
-    duration: '12 Weeks',
+    duration: '4 Weeks',
     students: '130+ Enrolled',
     level: 'Beginner to Intermediate',
     modules: [
@@ -120,7 +120,7 @@ const programs = [
 ]
 
 const highlights = [
-  { icon: Clock, label: '12 Weeks Per Program' },
+  { icon: Clock, label: '4 Weeks Per Program' },
   { icon: Users, label: 'Expert-Led Training' },
   { icon: Award, label: 'Verified Certificate' },
   { icon: BookOpen, label: 'Practical Curriculum' },
@@ -153,7 +153,7 @@ export default function ProgramsPage() {
               </span>
             </h1>
             <p className="text-gray-400 text-xl leading-relaxed max-w-2xl mb-12">
-              Each program is a structured 12-week masterclass built around
+              Each program is a structured 4-week masterclass built around
               practical business education, real market insights, and strategies
               you can implement immediately.
             </p>

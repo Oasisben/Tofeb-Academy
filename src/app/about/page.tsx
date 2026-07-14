@@ -42,7 +42,7 @@ const stats = [
   { value: '500+', label: 'Graduates' },
   { value: '4', label: 'Sectors' },
   { value: '92%', label: 'Success Rate' },
-  { value: '2+', label: 'Years Running' },
+  { value: '4', label: 'Weeks Running' },
 ]
 
 export default function AboutPage() {

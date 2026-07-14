@@ -44,7 +44,7 @@ export const SECTORS = [
     { value: 500, suffix: '+', label: 'Graduates' },
     { value: 4, suffix: '', label: 'Sectors' },
     { value: 92, suffix: '%', label: 'Success Rate' },
-    { value: 12, suffix: 'wks', label: 'Program Length' },
+    { value: 4, suffix: 'wks', label: 'Program Length' },
   ]
   
   export const FAQS = [
@@ -54,7 +54,7 @@ export const SECTORS = [
     },
     {
       question: 'How long does each program last?',
-      answer: 'Each program runs for approximately 12 weeks. The schedule is structured but flexible enough to balance with other commitments.',
+      answer: 'Each program runs for approximately 4 weeks. The schedule is structured but flexible enough to balance with other commitments.',
     },
     {
       question: 'Is the training online or physical?',
