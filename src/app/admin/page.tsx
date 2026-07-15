@@ -55,7 +55,7 @@ export default function AdminLogin() {
         {/* Logo */}
         <div className="flex items-center gap-3 mb-8">
           <Image
-            src="/images/logo.jpeg"
+            src="/images/logo.png"
             alt="Tofeb Academy"
             width={36}
             height={36}

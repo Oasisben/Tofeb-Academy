@@ -6,7 +6,7 @@ const steps = [
   {
     step: '01',
     title: 'Choose Your Sector',
-    description: 'Pick the business sector that excites you most — Food, Fashion, Real Estate, or Financial Literacy.',
+    description: 'Pick the business sector that excites you most — Food, Fashion or Real Estate.',
   },
   {
     step: '02',

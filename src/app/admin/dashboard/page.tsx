@@ -110,7 +110,7 @@ export default function AdminDashboard() {
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <Image
-              src="/images/logo.jpeg"
+              src="/images/logo.png"
               alt="Tofeb Academy"
               width={32}
               height={32}
