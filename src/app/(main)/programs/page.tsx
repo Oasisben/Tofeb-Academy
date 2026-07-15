@@ -89,34 +89,6 @@ const programs = [
       'Build a sustainable real estate income stream',
     ],
   },
-  {
-    id: 'financial-literacy',
-    sector: 'Financial Literacy',
-    title: 'Financial Intelligence Masterclass',
-    icon: TrendingUp,
-    gradient: 'from-green-500 to-emerald-400',
-    lightBg: 'bg-green-50',
-    iconColor: 'text-green-500',
-    duration: '4 Weeks',
-    students: '130+ Enrolled',
-    level: 'Beginner to Intermediate',
-    modules: [
-      'Money Mindset and Financial Foundations',
-      'Personal Budgeting and Expense Management',
-      'Business Financial Planning',
-      'Cash Flow Management',
-      'Savings and Emergency Funds',
-      'Investment Principles and Vehicles',
-      'Debt Management and Credit',
-      'Building Long-Term Wealth',
-    ],
-    outcomes: [
-      'Take full control of personal and business finances',
-      'Build and manage a business budget',
-      'Make smart investment decisions',
-      'Create a long-term wealth-building plan',
-    ],
-  },
 ]
 
 const highlights = [

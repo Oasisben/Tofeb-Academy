@@ -15,7 +15,7 @@ const perks = [
 
 const stats = [
   { value: '500+', label: 'Graduates' },
-  { value: '4', label: 'Sectors' },
+  { value: '3', label: 'Sectors' },
   { value: '92%', label: 'Success Rate' },
   { value: '24hrs', label: 'Response Time' },
 ]

@@ -6,7 +6,6 @@ const SECTORS = [
     { label: 'Food Sector', href: '/sectors' },
     { label: 'Fashion Sector', href: '/sectors' },
     { label: 'Real Estate Sector', href: '/sectors' },
-    { label: 'Financial Literacy', href: '/sectors' },
 ]
 
 export default function Footer() {

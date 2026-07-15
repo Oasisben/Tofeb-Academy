@@ -6,7 +6,6 @@ const SECTOR_LABELS: Record<string, string> = {
   'food': 'Food Sector',
   'fashion': 'Fashion Sector',
   'real-estate': 'Real Estate Sector',
-  
 }
 
 export async function sendConfirmationEmail({
@@ -23,7 +22,7 @@ export async function sendConfirmationEmail({
   await resend.emails.send({
     from: 'Tofeb Academy <onboarding@resend.dev>',
     to: email,
-    subject: 'Your Application Has Been Received — Tofeb Academy',
+    subject: '🎉 Your Enrollment is Confirmed — Tofeb Academy',
     html: `
       <!DOCTYPE html>
       <html>
@@ -52,46 +51,30 @@ export async function sendConfirmationEmail({
                   <!-- Body -->
                   <tr>
                     <td style="background:#ffffff;padding:48px 40px;">
-                      <h2 style="margin:0 0 8px;color:#0a1628;font-size:22px;font-weight:700;">
-                        Application Received! 🎉
-                      </h2>
-                      <p style="margin:0 0 24px;color:#64748b;font-size:15px;line-height:1.6;">
-                        Hi <strong style="color:#0a1628;">${full_name}</strong>, thank you for applying to Tofeb Academy.
-                        We have received your application and our team will be in touch within
-                        <strong style="color:#0a1628;">24 hours</strong> to confirm your enrollment and share next steps.
-                      </p>
+                      <div style="text-align:center;margin-bottom:32px;">
+                        <div style="width:64px;height:64px;background:#dcfce7;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;margin-bottom:16px;">
+                          <span style="font-size:28px;">✅</span>
+                        </div>
+                        <h2 style="margin:0 0 8px;color:#0a1628;font-size:24px;font-weight:700;">
+                          You're In! Welcome to Tofeb Academy
+                        </h2>
+                        <p style="margin:0;color:#64748b;font-size:15px;line-height:1.6;">
+                          Hi <strong style="color:#0a1628;">${full_name}</strong>, your payment has been confirmed
+                          and your enrollment is now active.
+                        </p>
+                      </div>
 
-                      <!-- Application summary -->
-                      <div style="background:#f4f8fd;border-radius:12px;padding:24px;margin-bottom:28px;">
-                        <h3 style="margin:0 0 16px;color:#0a1628;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;">
-                          Your Application Summary
-                        </h3>
-                        <table width="100%" cellpadding="0" cellspacing="0">
-                          <tr>
-                            <td style="padding:8px 0;border-bottom:1px solid #e2e8f0;">
-                              <span style="color:#94a3b8;font-size:13px;">Full Name</span>
-                            </td>
-                            <td style="padding:8px 0;border-bottom:1px solid #e2e8f0;text-align:right;">
-                              <span style="color:#0a1628;font-size:13px;font-weight:600;">${full_name}</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="padding:8px 0;border-bottom:1px solid #e2e8f0;">
-                              <span style="color:#94a3b8;font-size:13px;">Email</span>
-                            </td>
-                            <td style="padding:8px 0;border-bottom:1px solid #e2e8f0;text-align:right;">
-                              <span style="color:#0a1628;font-size:13px;font-weight:600;">${email}</span>
-                            </td>
-                          </tr>
-                          <tr>
-                            <td style="padding:8px 0;">
-                              <span style="color:#94a3b8;font-size:13px;">Preferred Sector</span>
-                            </td>
-                            <td style="padding:8px 0;text-align:right;">
-                              <span style="color:#1e5fa8;font-size:13px;font-weight:700;">${sectorLabel}</span>
-                            </td>
-                          </tr>
-                        </table>
+                      <!-- Enrollment card -->
+                      <div style="background:#f4f8fd;border-radius:12px;padding:24px;margin-bottom:28px;text-align:center;">
+                        <p style="margin:0 0 4px;color:#94a3b8;font-size:12px;text-transform:uppercase;letter-spacing:1px;font-weight:600;">
+                          Your Program
+                        </p>
+                        <p style="margin:0;color:#1e5fa8;font-size:20px;font-weight:800;font-family:sans-serif;">
+                          ${sectorLabel}
+                        </p>
+                        <p style="margin:8px 0 0;color:#64748b;font-size:13px;">
+                          4-Week Business Masterclass
+                        </p>
                       </div>
 
                       <!-- What happens next -->
@@ -100,26 +83,29 @@ export async function sendConfirmationEmail({
                       </h3>
                       <table width="100%" cellpadding="0" cellspacing="0" style="margin-bottom:32px;">
                         ${[
-                          ['Our team reviews your application', 'Within a few hours'],
-                          ['We contact you to confirm your spot', 'Within 24 hours'],
-                          ['You receive program details and access', 'After confirmation'],
-                        ].map(([step, time]) => `
+                          'Our team will reach out with your program schedule and onboarding details',
+                          'You will be added to the student community and alumni group',
+                          'Your 4-week journey begins — get ready to build',
+                        ].map((step, i) => `
                           <tr>
                             <td style="padding:10px 0;border-bottom:1px solid #f1f5f9;vertical-align:top;">
-                              <span style="color:#64748b;font-size:13px;line-height:1.5;">✓ ${step}</span>
-                            </td>
-                            <td style="padding:10px 0;border-bottom:1px solid #f1f5f9;text-align:right;vertical-align:top;">
-                              <span style="color:#94a3b8;font-size:12px;">${time}</span>
+                              <span style="display:inline-flex;align-items:center;gap:8px;color:#64748b;font-size:13px;line-height:1.5;">
+                                <span style="color:#1e5fa8;font-weight:700;">${i + 1}.</span> ${step}
+                              </span>
                             </td>
                           </tr>
                         `).join('')}
                       </table>
 
-                      <!-- CTA -->
+                      <p style="margin:0 0 24px;color:#94a3b8;font-size:13px;text-align:center;line-height:1.6;">
+                        Questions? Reply to this email or chat with us on WhatsApp.
+                        We're excited to have you on board! 🚀
+                      </p>
+
                       <div style="text-align:center;">
                         <a href="https://tofebacademy.com/programs"
                           style="display:inline-block;background:#1e5fa8;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;padding:14px 32px;border-radius:10px;">
-                          View Our Programs →
+                          View Your Program →
                         </a>
                       </div>
                     </td>
@@ -129,10 +115,10 @@ export async function sendConfirmationEmail({
                   <tr>
                     <td style="background:#f4f8fd;border-radius:0 0 16px 16px;padding:28px 40px;text-align:center;border-top:1px solid #e2e8f0;">
                       <p style="margin:0 0 8px;color:#94a3b8;font-size:12px;">
-                        Questions? Chat with us on WhatsApp or reply to this email.
+                        © ${new Date().getFullYear()} Tofeb Academy. All rights reserved.
                       </p>
                       <p style="margin:0;color:#cbd5e1;font-size:11px;">
-                        © ${new Date().getFullYear()} Tofeb Academy. All rights reserved.
+                        Building Tomorrow's Entrepreneurs
                       </p>
                     </td>
                   </tr>

@@ -40,7 +40,7 @@ const values = [
 
 const stats = [
   { value: '500+', label: 'Graduates' },
-  { value: '4', label: 'Sectors' },
+  { value: '3', label: 'Sectors' },
   { value: '92%', label: 'Success Rate' },
   { value: '4', label: 'Weeks Running' },
 ]

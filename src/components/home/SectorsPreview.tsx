@@ -32,15 +32,6 @@ const sectors = [
     lightBg: 'bg-blue-50',
     iconColor: 'text-blue-500',
   },
-  {
-    id: 'financial-literacy',
-    title: 'Financial Literacy',
-    description: 'Master your money. Learn budgeting, cash flow, investment, and the financial fundamentals every entrepreneur needs.',
-    icon: TrendingUp,
-    gradient: 'from-green-500 to-emerald-400',
-    lightBg: 'bg-green-50',
-    iconColor: 'text-green-500',
-  },
 ]
 
 export default function SectorsPreview() {
@@ -63,7 +54,7 @@ export default function SectorsPreview() {
               Choose your path
             </h2>
             <p className="text-gray-400 text-lg mt-3 leading-relaxed">
-              Four sectors. One mission — equipping you with the business
+              Three sectors. One mission — equipping you with the business
               knowledge to build something real.
             </p>
           </div>

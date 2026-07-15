@@ -1,8 +1,6 @@
 import type { Metadata } from 'next'
 import { Plus_Jakarta_Sans, Inter } from 'next/font/google'
 import './globals.css'
-import Navbar from '@/components/ui/layout/NavBar'
-import Footer from '@/components/ui/layout/Footer'
 import WhatsAppFloat from '@/components/ui/shared/WhatsAppFloat'
 
 const jakarta = Plus_Jakarta_Sans({
@@ -31,9 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${jakarta.variable} ${inter.variable}`}>
       <body className="font-inter bg-white text-gray-900 antialiased">
-        <Navbar />
         <main>{children}</main>
-        <Footer />
         <WhatsAppFloat />
       </body>
     </html>
