@@ -1,31 +1,30 @@
-import { NextResponse } from "next/server";
-
-export async function POST() {
-  return NextResponse.json({
-    message: "Registration endpoint coming soon.",
-  });
-}
-
-/*import { NextRequest, NextResponse } from 'next/server'
+import { NextRequest, NextResponse } from 'next/server'
 import { supabase } from '@/lib/supabase'
-//import { registrationSchema } from '@/lib/validations'
+import { registrationSchema } from '@/lib/validations'
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json()
-    // const parsed = registrationSchema.safeParse(body)
 
-    // if (!parsed.success) {
-    //   return NextResponse.json(
-    //     { error: parsed.error.flatten().fieldErrors },
-    //     { status: 400 }
+    const parsed = registrationSchema.safeParse(body)
+    if (!parsed.success) {
+      return NextResponse.json(
+        { error: parsed.error.flatten().fieldErrors },
+        { status: 400 }
       )
     }
 
     const { data, error } = await supabase
-     // .from('registrations')
-      //.insert([parsed.data])
-      //.select()
+      .from('registrations')
+      .insert([{
+        full_name: parsed.data.full_name,
+        phone: parsed.data.phone,
+        email: parsed.data.email,
+        state: parsed.data.state,
+        preferred_sector: parsed.data.preferred_sector,
+        payment_status: 'pending',
+      }])
+      .select()
       .single()
 
     if (error) {
@@ -38,4 +37,4 @@ export async function POST(req: NextRequest) {
     console.error('Unexpected error:', err)
     return NextResponse.json({ error: 'Server error' }, { status: 500 })
   }
-}*/
+}

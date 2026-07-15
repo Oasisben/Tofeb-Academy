@@ -8,7 +8,7 @@ const sectors = [
   'Food Business',
   'Fashion Business',
   'Real Estate',
-  'Financial Literacy',
+  
 ]
 
 export default function Hero() {

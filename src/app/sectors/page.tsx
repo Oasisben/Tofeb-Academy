@@ -65,26 +65,6 @@ const sectors = [
     ],
     whoIsItFor: 'Aspiring real estate agents, property investors, and anyone who wants to build a sustainable income stream through the Nigerian property market.',
   },
-  {
-    id: 'financial-literacy',
-    title: 'Financial Literacy',
-    tagline: 'Master your money and make smarter decisions.',
-    icon: TrendingUp,
-    gradient: 'from-green-500 to-emerald-400',
-    lightBg: 'bg-green-50',
-    iconColor: 'text-green-500',
-    description:
-      'Financial intelligence is the foundation of every successful business. This program equips you with the money knowledge every entrepreneur needs to survive, grow, and build long-term wealth.',
-    whatYouLearn: [
-      'Personal and business budgeting',
-      'Cash flow management',
-      'Investment principles and strategies',
-      'Business financial planning',
-      'Debt management and credit',
-      'Building long-term financial wealth',
-    ],
-    whoIsItFor: 'Entrepreneurs, small business owners, professionals, and anyone who wants to take control of their finances and make smarter money decisions.',
-  },
 ]
 
 export default function SectorsPage() {
