@@ -78,10 +78,10 @@ export default function Footer() {
                 <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-gray-600">
                     <p>© {new Date().getFullYear()} Tofeb Academy. All rights reserved.</p>
                     <div className="flex items-center gap-6">
-                        <a href="https://wa.me/2348033710031" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">WhatsApp</a>
+                       {/* <a href="https://wa.me/2348033710031" target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">WhatsApp</a>
                         <a href="#" className="hover:text-white transition-colors">Instagram</a>
                         <a href="#" className="hover:text-white transition-colors">Twitter</a>
-                        <a href="#" className="hover:text-white transition-colors">Facebook</a>
+                        <a href="#" className="hover:text-white transition-colors">Facebook</a> */}
                     </div>
                 </div>
             </div>
