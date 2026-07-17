@@ -47,7 +47,7 @@ export const STATS = [
 ]
 
 export const BANK_DETAILS = {
-  bankName: 'Moniepoint or Opay',
+  bankName: 'Moniepoint Microfinance Bank',
   accountName: 'Atitebi Busayo Tofunmi',
   accountNumber: '8033710031',
   amount: '₦20,000',
