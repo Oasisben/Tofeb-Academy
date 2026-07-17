@@ -7,26 +7,26 @@ import { STATS } from '@/lib/constants'
 function CountUp({ value, suffix }: { value: number; suffix: string }) {
   const [count, setCount] = useState(0)
   const ref = useRef<HTMLSpanElement>(null)
-  const started = useRef(false)
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && !started.current) {
-          started.current = true
+        if (entry.isIntersecting) {
+          let start = 0
           const duration = 2000
           const steps = 60
           const increment = value / steps
-          let current = 0
           const timer = setInterval(() => {
-            current += increment
-            if (current >= value) {
+            start += increment
+            if (start >= value) {
               setCount(value)
               clearInterval(timer)
             } else {
-              setCount(Math.floor(current))
+              setCount(Math.floor(start))
             }
           }, duration / steps)
+        } else {
+          setCount(0)
         }
       },
       { threshold: 0.3 }

@@ -5,7 +5,7 @@ import { CheckCircle } from 'lucide-react'
 import RegistrationForm from '@/components/register/RegistrationForm'
 
 const perks = [
-  'Access to full 12-week program curriculum',
+  'Access to full 4-week program curriculum',
   'Live sessions with industry expert trainers',
   'Verified certificate of completion',
   'Lifetime access to alumni community',
