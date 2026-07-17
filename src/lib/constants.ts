@@ -64,7 +64,7 @@ export const FAQS = [
   },
   {
     question: 'Is the training online or physical?',
-    answer: 'We offer both online and hybrid learning options so you can participate from anywhere in Nigeria or abroad.',
+    answer: 'The training is solely online so you can participate from anywhere.',
   },
   {
     question: 'What is Financial Literacy and is it included?',
