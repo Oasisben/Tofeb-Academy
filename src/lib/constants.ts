@@ -47,10 +47,10 @@ export const STATS = [
 ]
 
 export const BANK_DETAILS = {
-  bankName: 'First Bank Nigeria',
-  accountName: 'Tofeb Academy',
-  accountNumber: '1234567890',
-  amount: '₦50,000',
+  bankName: 'Moniepoint or Opay',
+  accountName: 'Atitebi Busayo Tofunmi',
+  accountNumber: '8033710031',
+  amount: '₦20,000',
 }
 
 export const FAQS = [
@@ -60,7 +60,7 @@ export const FAQS = [
   },
   {
     question: 'How long does each program last?',
-    answer: 'Each program runs for approximately 12 weeks. The schedule is structured but flexible enough to balance with other commitments.',
+    answer: 'Each program runs for approximately 4 weeks. The schedule is structured but flexible enough to balance with other commitments.',
   },
   {
     question: 'Is the training online or physical?',
