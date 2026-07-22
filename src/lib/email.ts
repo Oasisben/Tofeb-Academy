@@ -20,7 +20,7 @@ export async function sendConfirmationEmail({
   const sectorLabel = SECTOR_LABELS[preferred_sector] ?? preferred_sector
 
   await resend.emails.send({
-    from: 'Tofeb Academy <onboarding@resend.dev>',
+    from: 'Tofeb Academy <noreply@tofebacademy.com.ng>',
     to: email,
     subject: '🎉 Your Enrollment is Confirmed — Tofeb Academy',
     html: `
@@ -103,7 +103,7 @@ export async function sendConfirmationEmail({
                       </p>
 
                       <div style="text-align:center;">
-                        <a href="https://tofebacademy.com/programs"
+                        <a href="https://tofebacademy.com.ng/programs"
                           style="display:inline-block;background:#1e5fa8;color:#ffffff;text-decoration:none;font-size:14px;font-weight:700;padding:14px 32px;border-radius:10px;">
                           View Your Program →
                         </a>

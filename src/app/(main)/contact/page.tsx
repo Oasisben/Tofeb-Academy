@@ -8,14 +8,14 @@ const contactInfo = [
   {
     icon: Mail,
     label: 'Email',
-    value: 'info@tofebacademy.com',
-    href: 'mailto:info@tofebacademy.com',
+    value: 'info@tofebacademy.com.ng',
+    href: 'mailto:info@tofebacademy.com.ng',
   },
   {
     icon: Phone,
     label: 'Phone',
-    value: '+234 800 000 0000',
-    href: 'tel:+2348000000000',
+    value: '+234 803 371 0031',
+    href: 'tel:+2348033710031',
   },
   {
     icon: MapPin,
